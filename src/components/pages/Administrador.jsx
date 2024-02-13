@@ -1,5 +1,6 @@
-import { Button, Container, Table } from "react-bootstrap"
+import { Container, Table } from "react-bootstrap"
 import ItemReceta from "./receta/ItemReceta"
+import { Link } from "react-router-dom"
 
 const Administrador = () => {
   return (
@@ -7,7 +8,7 @@ const Administrador = () => {
       <Container>
         <div className="d-flex align-items-center justify-content-between">
           <h1 className="display-3">Recetas disponibles</h1>
-          <Button>Agregar</Button>
+          <Link to='admin/crear' className="btn btn-primary">Agregar</Link>
         </div>
 
         <Table striped bordered responsive>
@@ -21,6 +22,10 @@ const Administrador = () => {
             </tr>
           </thead>
           <tbody>
+            <ItemReceta />
+            <ItemReceta />
+            <ItemReceta />
+            <ItemReceta />
             <ItemReceta />
           </tbody>
         </Table>
