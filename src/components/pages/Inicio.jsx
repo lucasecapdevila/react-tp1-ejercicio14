@@ -1,4 +1,5 @@
 import { Container, Row } from "react-bootstrap"
+import CardReceta from "./receta/CardReceta"
 
 const Inicio = () => {
   return (
@@ -7,7 +8,12 @@ const Inicio = () => {
       <Container className="mt-3">
         <h1 className="display-3 text-center">RollingCook, tu blog de recetas</h1>
         <Row>
-          {/* componente Card Receta */}
+          <CardReceta />
+          <CardReceta />
+          <CardReceta />
+          <CardReceta />
+          <CardReceta />
+          <CardReceta />
         </Row>
       </Container>
     </main>
