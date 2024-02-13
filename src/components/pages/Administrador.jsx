@@ -1,4 +1,5 @@
 import { Button, Container, Table } from "react-bootstrap"
+import ItemReceta from "./receta/ItemReceta"
 
 const Administrador = () => {
   return (
@@ -20,7 +21,7 @@ const Administrador = () => {
             </tr>
           </thead>
           <tbody>
-            {/* Item Receta */}
+            <ItemReceta />
           </tbody>
         </Table>
       </Container>
