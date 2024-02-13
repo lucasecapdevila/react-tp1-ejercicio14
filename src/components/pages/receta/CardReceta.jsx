@@ -5,7 +5,7 @@ const CardReceta = () => {
     <Col xs={12} sm={6} md={4} className="my-2">
       <Card className="px-0">
         <CardHeader className="p-0">
-          {/* Imagen de la receta */}
+          Imagen de la receta
         </CardHeader>
         <CardBody>
           <CardTitle>Nombre de receta</CardTitle>

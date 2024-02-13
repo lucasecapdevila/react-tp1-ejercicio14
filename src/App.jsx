@@ -7,10 +7,10 @@ import Inicio from './components/pages/Inicio'
 function App() {
   return (
     <>
-      {/* <Inicio /> */}
+      <Inicio />
       {/* <DetalleReceta /> */}
       {/* <Error404 /> */}
-      <Administrador />
+      {/* <Administrador /> */}
     </>
   )
 }
