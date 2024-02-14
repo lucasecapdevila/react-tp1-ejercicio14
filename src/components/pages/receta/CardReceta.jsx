@@ -1,19 +1,20 @@
-import { Card, CardBody, CardFooter, CardHeader, CardText, CardTitle, Col } from "react-bootstrap"
+import { Card, CardBody, CardFooter, CardHeader, CardImg, CardText, CardTitle, Col } from "react-bootstrap"
 import { Link } from "react-router-dom"
 
-const CardReceta = () => {
+const CardReceta = ({receta}) => {
   return (
     <Col xs={12} sm={6} md={4} className="my-2">
-      <Card className="px-0">
+      <Card className="px-0 h-100">
         <CardHeader className="p-0">
-          Imagen de la receta
+          <CardImg className="img-fluid" src={receta.imagen} />
         </CardHeader>
         <CardBody>
-          <CardTitle>Nombre de receta</CardTitle>
+          <CardTitle>{receta.nombreReceta}</CardTitle>
           <CardText>
-            Descripción
+            {receta.descripcion}
             <br />
-            Categoría
+            <br />
+            <b>Categoría:</b>{receta.categoria}
           </CardText>
         </CardBody>
         <CardFooter className="d-flex flex-column">
