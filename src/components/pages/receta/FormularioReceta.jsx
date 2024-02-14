@@ -30,10 +30,12 @@ const FormularioReceta = () => {
           <Form.Label>Categoría<span className="text-danger">*</span></Form.Label>
           <Form.Select required>
             <option value="">Seleccione una opcion</option>
+            <option value="entradas">Entradas</option>
+            <option value="guarnicion">Guarnición</option>
             <option value="platoPrincipal">Plato Principal</option>
             <option value="postres">Postres</option>
-            <option value="dulces">Dulces</option>
-            <option value="salados">Salados</option>
+            <option value="salsas">Salsas</option>
+            <option value="masas">Pizzas y Masas</option>
           </Form.Select>
         </Form.Group>
 

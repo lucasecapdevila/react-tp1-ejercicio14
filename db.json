@@ -1,0 +1,96 @@
+{
+  "recetas": [
+    {
+      "nombreReceta": "Contramuslos de pollo en salsa de cebolla",
+      "categoria": "Plato Principal",
+      "descripcion": "El pollo es una de esas carnes que admite tantas preparaciones como tu imaginación te deje. Estos contramuslos de pollo en salsa de cebolla son perfectos para diario o para algún día que quieras sorprender en casa. Queda un pollo guisado muy tierno y la salsa le da un toque espectacular. Puedes utilizar la parte del pollo que prefieras, los jamoncitos del pollo también quedarían deliciosos guisados de esta forma.",
+      "imagen": "https://www.annarecetasfaciles.com/files/contramusloa-pollo-salsa-cebolla-3-815x458.jpg",
+      "ingredientes": [
+        "5 contramuslos de pollo",
+        "1 cebolla",
+        "2 dientes de ajo",
+        "200 ml de caldo de pollo",
+        "Sal y pimienta",
+        "Aceite de oliva",
+        "1 hoja de laurel",
+        "Papas fritas para acompañar"
+      ],
+      "preparacion": [
+        "Prepara los contramuslos de pollo. Salpimenta los contramuslos al gusto y cocina en una sartén con un chorro de aceite hasta que estén dorados por los dos lados. Añade la cebolla y los ajos picados y cocina a fuego lento hasta que empiece a tomar color.",
+        "Incorpora el caldo y la hoja de laurel, pon a punto de sal y deja cocinar tapado durante 30 minutos. De vez en cuando, dales la vuelta a los contramuslos para que se vayan guisando por todos los lados y queden cocinados por todos las lados.",
+        "Fríe unas papas para acompañar y sirve. También puedes añadir un poco de ensalada y obtener un plato redondo. Sirve un contramuslo por ración bien regado con la salsa de cebolla."
+      ],
+      "disponibilidad": true,
+      "id": "1"
+    },
+    {
+      "nombreReceta": "Lemon pie o tarta de crema de limón con merengue",
+      "categoria": "Postres",
+      "descripcion": "Se te hará la boca agua con esta Lemon pie o tarta de crema de limón con merengue. Además de una presentación exquisita, válida para cualquier celebración, tiene un sabor delicioso. Decórala a tu gusto con más o menos merengue y sorprende a los tuyos. Sigue el paso a paso y te saldrá perfecta.",
+      "imagen": "https://www.annarecetasfaciles.com/files/lemon-pie-815x458.jpg",
+      "ingredientes": [
+        "Ingredientes para la base de masa quebrada:",
+        "200 g de harina (1 taza y media)",
+        "120 g de mantequilla (1/2 taza)",
+        "40 g de azúcar (4 cucharadas)",
+        "1 huevo",
+        "Ingredientes para la crema de limón:",
+        "5 yemas y 1 huevo entero",
+        "250 ml de zumo de limón (6 limones)",
+        "75 g de mantequilla (1/3 de taza)",
+        "150 g de azúcar (2/3 de taza)",
+        "250 ml de nata o crema de leche (1 taza)",
+        "50 g de maicena (1/2 taza)",
+        "Ingredientes para el merengue:",
+        "5 claras (180g)",
+        "1 cucharada de zumo de limón",
+        "200 g de azúcar (2/3 de taza y 4 cucharadas)",
+        "60 ml de agua (1/4 de taza)"
+      ],
+      "preparacion": [
+        "Prepara la masa quebrada. Tamiza la harina a través de un colador para evitar que tenga grumos. Añade el azúcar y mezcla. Añade el huevo y la mantequilla fría. Mezcla con la espátula y, luego, con las manos. Poco a poco se irá integrando y quedará una masa muy fina.",
+        "Enfría la masa. Envuelve la masa en film de cocina y aplasta con las manos para que luego sea más fácil estirarla. Guárdala en la heladera hasta que esté bien firme al menos media hora.",
+        "Prepara la crema de limón. Pon las cinco yemas y el huevo entero en un bol y añade el zumo de limón. Incorpora el azúcar y la maicena. Bate hasta integrar todos los ingredientes durante un minuto. Incorpora la nata caliente cuando los huevos hayan espumado. Incorpora poco a poco y a la vez que vas batiendo. Calienta la crema en una cazuela al fuego. Espera a que se caliente sin dejar de remover hasta que arranque el hervor. Apaga el fuego e incorpora la mantequilla. Mezcla hasta que funda por completo. Cuela a través de un colador y presiona hasta que pase toda la crema por el colador. Deja que enfríe a temperatura ambiente con un film de cocina en contacto con la crema. Guárdala luego en la nevera.",
+        "Precalienta el horno a 200 grados con calor arriba y abajo y sin aire.",
+        "Extiende la masa sobre el mármol. Espolvorea un poco de harina sobre la mesa y coloca la masa encima. Espolvorea harina encima de la masa y extiende con un rodillo hasta obtener un grosor de aproximadamente medio centímetro.",
+        "Hornea la masa. Ayúdate del rodillo para transportar la masa dentro del molde. Enrolla la masa sobre el rodillo y colócala sobre el molde. Adapta bien la masa en el molde dándole un poco de holgura. Corta la masa con el rodillo y retira el exceso. Pincha la masa con un tenedor. Pon papel de aluminio encima y unos garbanzos así evitarás que la masa se infle. Hornea a 200 grados con calor arriba y abajo durante 15 minutos aproximadamente",
+        "Prepara el merengue. Pon el azúcar en un cazo al fuego y añade agua hasta que moje bien el azúcar. Mueve de vez en cuando y tendrás el almíbar listo cuando aparezcan pompas grandes. Pon todas las claras en un bol y añade una cucharada de zumo de limón. Monta con una batidora de varillas hasta que dibujen trazo. Añade el almíbar por el borde y ve integrando así poco a poco. Bate de nuevo hasta que las claras estén muy brillantes y de un color blanco intento.",
+        "Monta la tarta. Desmolda la base del molde. Pon cucharadas de crema de limón en la base y extiende con la misma cuchara intentando que no queden burbujas. Alisa la superficie. Pon el merengue en una manga pastelera y haz montañitas encima de la crema. Acaba la decoración con el soplete."
+      ],
+      "disponibilidad": true,
+      "id": "2"
+    },
+    {
+      "nombreReceta": "Salsa boloñesa",
+      "categoria": "Salsas",
+      "descripcion": "Te enseño a preparar la auténtica Salsa Boloñesa para que acompañes tus platos de pasta con esta salsa tradicional de Bolonia. Los ingredientes que se utilizan son muy básicos y fáciles de encontrar. Te animo a que la prepares y disfrutes de un buen plato de pasta a la boloñesa.",
+      "imagen": "https://www.annarecetasfaciles.com/files/salsa-bolonesa-815x458.jpg",
+      "ingredientes": [
+        "400 g de carne picada de cerdo y ternera",
+        "1 cebolla",
+        "2 dientes de ajo",
+        "1 rama de apio",
+        "1 zanahoria",
+        "½ vaso de vino blanco",
+        "300 g de tomate triturado",
+        "1 vaso de agua",
+        "1 hoja de laurel",
+        "Sal y pimienta",
+        "Aceite de oliva"
+      ],
+      "preparacion": [
+        "Pica en trocitos muy pequeños la cebolla, el ajo, la zanahoria y el apio.",
+        "En una cazuela coloca a fuego lento las verduras con un chorro de aceite, añade la carne picada, salpimenta al gusto y rehoga todo junto. Cuando empiece a tomar color la carne, incorpora el vino blanco y deja reducir el alcohol.",
+        "Añade el tomate triturado y pasados 3 o 4 minutos añade el agua y la hoja de laurel. Cuece a fuego lento durante 15 minutos o hasta que tenga la consistencia deseada."
+      ],
+      "disponibilidad": true,
+      "id": "3"
+    }
+  ],
+  "usuarios": [
+    {
+      "email": "prueba@mail.com",
+      "password": "123"
+    }
+  ]
+}

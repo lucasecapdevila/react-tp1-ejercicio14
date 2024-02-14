@@ -13,9 +13,7 @@ const CardReceta = () => {
           <CardText>
             Descripción
             <br />
-            Ingredientes
-            <br />
-            Preparación
+            Categoría
           </CardText>
         </CardBody>
         <CardFooter className="d-flex flex-column">
