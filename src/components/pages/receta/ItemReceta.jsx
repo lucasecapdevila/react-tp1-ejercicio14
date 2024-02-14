@@ -1,3 +1,5 @@
+import { faPenToSquare, faTrashCan } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Button } from "react-bootstrap"
 
 const ItemReceta = () => {
@@ -9,8 +11,8 @@ const ItemReceta = () => {
       <td>Categoría</td>
       <td>
         <div className="d-flex align-items-center justify-content-center">
-          <Button variant="warning" className="me-2">Editar</Button>
-          <Button variant="danger">Eliminar</Button>
+          <Button variant="warning" className="me-2"><FontAwesomeIcon icon={faPenToSquare} /></Button>
+          <Button variant="danger"><FontAwesomeIcon icon={faTrashCan} /></Button>
         </div>
       </td>
     </tr>
