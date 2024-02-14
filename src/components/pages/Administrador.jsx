@@ -41,11 +41,9 @@ const Administrador = () => {
             </tr>
           </thead>
           <tbody>
-            <ItemReceta />
-            <ItemReceta />
-            <ItemReceta />
-            <ItemReceta />
-            <ItemReceta />
+            {
+              listaRecetas.map((receta) => <ItemReceta key={receta.id} receta={receta} /> )
+            }
           </tbody>
         </Table>
       </Container>
