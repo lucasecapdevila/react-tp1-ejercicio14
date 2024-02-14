@@ -1,7 +1,6 @@
 import { Container, Row } from "react-bootstrap"
 import CardReceta from "./receta/CardReceta"
-import BarraNavegacion from "../common/BarraNavegacion"
-import Footer from "../common/Footer"
+import '../../helpers/queries'
 
 const Inicio = () => {
   return (
@@ -18,7 +17,6 @@ const Inicio = () => {
           <CardReceta />
         </Row>
       </Container>
-      <Footer />
     </main>
   )
 }
