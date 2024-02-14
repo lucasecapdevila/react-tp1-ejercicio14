@@ -3,8 +3,25 @@ import ItemReceta from "./receta/ItemReceta"
 import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPlus } from "@fortawesome/free-solid-svg-icons"
+import { useEffect, useState } from "react"
+import { leerRecetasAPI } from "../../helpers/queries"
 
 const Administrador = () => {
+  const [listaRecetas, setListaRecetas] = useState([])
+
+  useEffect(() => {
+    traerRecetas()
+  }, [])
+
+  const traerRecetas = async() => {
+    try {
+      const listaRecetasAPI = await leerRecetasAPI()
+      setListaRecetas(listaRecetasAPI)
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   return (
     <main className="mainPage">
       <Container>
