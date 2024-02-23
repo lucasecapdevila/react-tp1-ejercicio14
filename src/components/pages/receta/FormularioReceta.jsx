@@ -190,11 +190,11 @@ const FormularioReceta = () => {
             {preparacion.map(({id}, index) => (
               <li key={id}>
                 <Form.Control
+                  type="text"
                   as="textarea"
                   className="textareaForm"
                   name={`preparacion[${index}].paso`}
                   placeholder="Agregue el próximo paso para preparar la receta..."
-                  // defaultValue=""
                   {...register(`preparacion.${index}.paso`, {
                     required: 'El paso a paso de la receta es obligatorio.',
                     minLength:{
