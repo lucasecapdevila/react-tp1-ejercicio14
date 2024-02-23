@@ -3,13 +3,27 @@ import { useFieldArray, useForm, useWatch } from "react-hook-form"
 
 const FormularioReceta = () => {
   const {control, register, handleSubmit, formState: {errors}} = useForm()
-  const { fields, append, remove } = useFieldArray({
-    control,
-    name: "ingredientes",
-    rules: {
-      required: 'Debe agregar al menos 1 item.'
-    }
-  });
+  const {
+    fields: ingredientes,
+    append: appendIngredientes,
+    remove: removeIngredientes } = useFieldArray({
+      control,
+      name: "ingredientes",
+      rules: {
+        required: 'Debe agregar al menos 1 ítem.'
+      }
+    });
+  
+  const {
+    fields: preparacion,
+    append: appendPreparacion,
+    remove: removePreparacion } = useFieldArray({
+      control,
+      name: "preparacion",
+      rules: {
+        required: 'Debe agregar al menos 1 paso de la preparación.'
+      }
+    });
 
   const recetaValida = (receta) => {
     console.log(receta);
@@ -79,6 +93,7 @@ const FormularioReceta = () => {
           <Form.Label>Descripción<span className="text-danger">*</span></Form.Label>
           <Form.Control
             type="text"
+            className="textareaForm"
             placeholder="Ej: Un exquisito plato con atrapante aroma."
             as="textarea"
             {
@@ -101,7 +116,7 @@ const FormularioReceta = () => {
         <Form.Group className="mb-3 d-flex flex-column">
           <Form.Label>Ingredientes<span className="text-danger">*</span></Form.Label>
           <ul className="m-0 list-unstyled">
-            {fields.map(({id, producto, cantidad, unidad}, index) => (
+            {ingredientes.map(({id, producto, cantidad, unidad}, index) => (
               <li key={id}>
                 <Form.Control
                   className="inputIngrediente d-inline-block"
@@ -123,7 +138,7 @@ const FormularioReceta = () => {
                 />
                 
                 <Form.Control
-                  className="inputIngrediente d-inline-block my-3 mx-sm-2 mx-lg-0"
+                  className="inputIngrediente d-inline-block my-3 mx-sm-2"
                   type="number"
                   name={`ingredientes[${index}].cantidad`}
                   placeholder="Cantidad"
@@ -159,14 +174,45 @@ const FormularioReceta = () => {
                   <option value="l">Litros</option>
                   <option value="cc.">Centímetros cúbicos</option>
                 </select>
-                <Button variant="danger" className="my-3" type="button" onClick={() => remove(index)}>Borrar ingrediente</Button>
+                <Button variant="danger" className="my-3" type="button" onClick={() => removeIngredientes(index)}>Borrar ingrediente</Button>
                 <Form.Text className="d-block text-danger">{errors.ingredientes?.[index]?.producto?.message}</Form.Text>
                 <Form.Text className="d-block text-danger">{errors.ingredientes?.[index]?.cantidad?.message}</Form.Text>
                 <Form.Text className="text-danger">{errors.ingredientes?.[index]?.unidad?.message}</Form.Text>
               </li>
             ))}
           </ul>
-          <Button className="align-self-start" type="button" onClick={() => append({nombre: 'Ingrediente', cantidad: 1, unidad: 'Elija una unidad de medida'})}>Agregar ingrediente</Button>
+          <Button className="align-self-start" type="button" onClick={() => appendIngredientes({producto: 'Ingrediente', cantidad: 1, unidad: 'Elija una unidad de medida'})}>Agregar ingrediente</Button>
+        </Form.Group>
+
+        <Form.Group className="mb-3 d-flex flex-column">
+          <Form.Label>Preparación (agregue paso a paso en cada campo de texto)<span className="text-danger">*</span></Form.Label>
+          <ol className="m-0 list-unstyled">
+            {preparacion.map(({id}, index) => (
+              <li key={id}>
+                <Form.Control
+                  as="textarea"
+                  className="textareaForm"
+                  name={`preparacion[${index}].paso`}
+                  placeholder="Agregue el próximo paso para preparar la receta..."
+                  // defaultValue=""
+                  {...register(`preparacion.${index}.paso`, {
+                    required: 'El paso a paso de la receta es obligatorio.',
+                    minLength:{
+                      value: 10,
+                      message: 'Debe ingresar como mínimo 10 carácteres para el paso de la receta.'
+                    },
+                    maxLength:{
+                      value: 500,
+                      message: 'Debe ingresar como máximo 500 carácteres para el paso de la receta.'
+                    }
+                  })}
+                />
+                <Button variant="danger" className="mt-3" type="button" onClick={() => removePreparacion(index)}>Borrar paso</Button>
+                <Form.Text className="d-block text-danger">{errors.preparacion?.[index]?.paso?.message}</Form.Text>
+              </li>
+            ))}
+          </ol>
+          <Button className="mt-3 align-self-start" type="button" onClick={() => appendPreparacion({paso: 'Siguiente paso...'})}>Agregar paso</Button>
         </Form.Group>
 
         <Button type="submit" variant="success">Guardar</Button>

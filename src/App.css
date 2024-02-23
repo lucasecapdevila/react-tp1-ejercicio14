@@ -20,7 +20,7 @@
   object-fit: cover;
 }
 
-#formDescripcion{
+.textareaForm{
   height: 150px;
   resize: none;
 }
@@ -29,14 +29,8 @@
   width: 100%;
 }
 
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media screen and (min-width: 576px) {
   .inputIngrediente{
     width: 31% !important;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  .inputIngrediente{
-    width: 32% !important;
   }
 }
