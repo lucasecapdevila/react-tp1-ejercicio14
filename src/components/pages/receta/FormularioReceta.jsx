@@ -1,8 +1,12 @@
 import { Button, Form } from "react-bootstrap"
-import { useForm } from "react-hook-form"
+import { useFieldArray, useForm, useWatch } from "react-hook-form"
 
 const FormularioReceta = () => {
-  const {register, handleSubmit, formState: {errors}} = useForm()
+  const {control, register, handleSubmit, formState: {errors}} = useForm()
+  const { fields, append, remove } = useFieldArray({
+    control, // control props comes from useForm (optional: if you are using FormContext)
+    name: "ingredientes", // unique name for your Field Array
+  });
 
   const recetaValida = (receta) => {
     console.log(receta);
@@ -89,25 +93,36 @@ const FormularioReceta = () => {
           <Form.Text className="text-danger">{errors.descripcion?.message}</Form.Text>
         </Form.Group>
 
-        {/* <Form.Group className="mb-3" controlId="formIngredientes">
+        <Form.Group className="mb-3" controlId="formIngredientes">
           <Form.Label>Ingredientes<span className="text-danger">*</span></Form.Label>
-          <Form.Control
-            type="text"
-            placeholder="Ingredientes de la receta"
-            required
-          />
-          <Form.Text className="text-danger">mensaje de error</Form.Text>
+          <ul>
+            {fields.map(({id}, index) => (
+              <li key={id}>
+                <Form.Control
+                  className="w-25 d-inline-block"
+                  type="text"
+                  placeholder="Producto/s"
+                  {...register(`ingredientes.${index}.nombre`)} 
+                />
+                <Form.Control
+                  className="w-25 d-inline-block mx-4"
+                  type="number"
+                  placeholder="Cantidad"
+                  {...register(`ingredientes.${index}.cantidad`, {valueAsNumber: true})} 
+                />
+                <Form.Control
+                  className="w-25 d-inline-block me-2"
+                  type="number"
+                  placeholder=""
+                  //! AGREGAR SELECTS
+                  {...register(`ingredientes.${index}.cantidad`)} 
+                />
+                <Button className="my-3" type="button">Borrar</Button>
+              </li>
+            ))}
+          </ul>
+          <Button type="button" onClick={() => append({nombre: "Ingrediente", cantidad: 1})}>Agregar</Button>
         </Form.Group>
-
-        <Form.Group className="mb-3" controlId="formPreparacion">
-          <Form.Label>Preparación<span className="text-danger">*</span></Form.Label>
-          <Form.Control
-            type="text"
-            placeholder="Preparación de la receta"
-            required
-          />
-          <Form.Text className="text-danger">mensaje de error</Form.Text>
-        </Form.Group> */}
 
         <Button type="submit" variant="success">Guardar</Button>
       </Form>
