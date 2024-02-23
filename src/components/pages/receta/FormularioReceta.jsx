@@ -7,15 +7,13 @@ const FormularioReceta = () => {
     control,
     name: "ingredientes",
     rules: {
-      required: 'Debe agregar al menos 1 item.',
-      validate: () => {
-
-      }
+      required: 'Debe agregar al menos 1 item.'
     }
   });
 
   const recetaValida = (receta) => {
     console.log(receta);
+    //  Guardar receta
     //  Vaciar formulario una vez que la receta es creada
   }
 
@@ -111,23 +109,49 @@ const FormularioReceta = () => {
                   name={`ingredientes[${index}].producto`}
                   placeholder="Producto"
                   defaultValue={producto}
-                  {...register(`ingredientes.${index}.producto`, {required: true})} 
+                  {...register(`ingredientes.${index}.producto`, {
+                    required: 'El nombre del ingrediente es obligatorio.',
+                    minLength:{
+                      value: 2,
+                      message: 'Debe ingresar como mínimo 2 carácteres para el nombre del ingrediente.'
+                    },
+                    maxLength:{
+                      value: 50,
+                      message: 'Debe ingresar como máximo 50 carácteres para el nombre del ingrediente.'
+                    }
+                  })}
                 />
+                
                 <Form.Control
                   className="w-25 d-inline-block mx-4"
                   type="number"
                   name={`ingredientes[${index}].cantidad`}
                   placeholder="Cantidad"
                   defaultValue={cantidad}
-                  {...register(`ingredientes.${index}.cantidad`, {required: true, valueAsNumber: true})} 
+                  {...register(`ingredientes.${index}.cantidad`, {
+                    required: 'La cantidad a usar del ingrediente es obligatoria.',
+                    valueAsNumber: true,
+                    min:{
+                      value: 1,
+                      message: 'La cantidad mínima debe ser 1.'
+                    },
+                    max:{
+                      value: 999,
+                      message: 'La cantidad máxima debe ser 999.'
+                    }
+                  })} 
                 />
+                
                 <select
                   className="form-select w-25 d-inline-block me-2"
                   name={`ingredientes[${index}].unidad`}
                   placeholder="Unidad de medida"
-                  {...register(`ingredientes.${index}.unidad`, {required: true})}
+                  defaultValue={unidad}
+                  {...register(`ingredientes.${index}.unidad`, {
+                    required: 'La unidad de medida del ingrediente es obligatoria.'
+                  })}
                 >
-                  <option value="">Unidad de medida</option>
+                  <option value="">Seleccione una unidad de medida</option>
                   <option value="mg">Miligramos</option>
                   <option value="g">Gramos</option>
                   <option value="kg">Kilogramos</option>
@@ -136,10 +160,12 @@ const FormularioReceta = () => {
                   <option value="cc.">Centímetros cúbicos</option>
                 </select>
                 <Button className="my-3" type="button" onClick={() => remove(index)}>Borrar</Button>
+                <Form.Text className="d-block text-danger">{errors.ingredientes?.[index]?.producto?.message}</Form.Text>
+                <Form.Text className="d-block text-danger">{errors.ingredientes?.[index]?.cantidad?.message}</Form.Text>
+                <Form.Text className="text-danger">{errors.ingredientes?.[index]?.unidad?.message}</Form.Text>
               </li>
             ))}
           </ul>
-          <Form.Text className="text-danger mb-4">{errors.ingredientes?.message}</Form.Text>
           <Button className="align-self-start" type="button" onClick={() => append({nombre: 'Ingrediente', cantidad: 1, unidad: 'Elija una unidad de medida'})}>Agregar</Button>
         </Form.Group>
 

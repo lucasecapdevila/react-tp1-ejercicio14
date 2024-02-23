@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom"
 
 const BarraNavegacion = () => {
   return (
-    <Navbar expand="lg" bg="dark" data-bs-theme="dark">
+    <Navbar className="py-4" expand="lg" bg="dark" data-bs-theme="dark">
       <Container>
         <Navbar.Brand as={Link} to='/'>RollingCook</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

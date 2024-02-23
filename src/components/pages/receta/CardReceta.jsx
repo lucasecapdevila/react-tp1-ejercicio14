@@ -6,15 +6,15 @@ const CardReceta = ({receta}) => {
     <Col xs={12} sm={6} md={4} className="my-2">
       <Card className="px-0 h-100">
         <CardHeader className="p-0">
-          <CardImg className="img-fluid" src={receta.imagen} />
+          <CardImg className="img-fluid card-img" src={receta.imagen} alt={receta.nombreReceta} />
         </CardHeader>
         <CardBody>
           <CardTitle>{receta.nombreReceta}</CardTitle>
           <CardText>
+            <b>Categoría:</b> {receta.categoria}
+            <br />
+            <br />
             {receta.descripcion}
-            <br />
-            <br />
-            <b>Categoría:</b>{receta.categoria}
           </CardText>
         </CardBody>
         <CardFooter className="d-flex flex-column">
