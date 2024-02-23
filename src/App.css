@@ -13,10 +13,3 @@
   height: 500px;
   width: 100%;
 }
-
-/* Borro las flechas en input tipo number */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
