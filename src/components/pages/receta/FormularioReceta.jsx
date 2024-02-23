@@ -16,6 +16,7 @@ const FormularioReceta = () => {
 
   const recetaValida = (receta) => {
     console.log(receta);
+    //  Vaciar formulario una vez que la receta es creada
   }
 
   return (
@@ -67,12 +68,12 @@ const FormularioReceta = () => {
           <Form.Label>Categoría<span className="text-danger">*</span></Form.Label>
           <Form.Select required>
             <option value="">Seleccione una opcion</option>
-            <option value="entradas">Entradas</option>
-            <option value="guarnicion">Guarnición</option>
-            <option value="platoPrincipal">Plato Principal</option>
-            <option value="postres">Postres</option>
-            <option value="salsas">Salsas</option>
-            <option value="masas">Pizzas y Masas</option>
+            <option value="Entradas">Entradas</option>
+            <option value="Guarnicion">Guarnición</option>
+            <option value="PlatoPrincipal">Plato Principal</option>
+            <option value="Postres">Postres</option>
+            <option value="Salsas">Salsas</option>
+            <option value="Masas">Pizzas y Masas</option>
           </Form.Select>
         </Form.Group>
 
@@ -99,36 +100,47 @@ const FormularioReceta = () => {
           <Form.Text className="text-danger">{errors.descripcion?.message}</Form.Text>
         </Form.Group>
 
-        <Form.Group className="mb-3 d-flex flex-column" controlId="formIngredientes">
+        <Form.Group className="mb-3 d-flex flex-column">
           <Form.Label>Ingredientes<span className="text-danger">*</span></Form.Label>
-          <ul className="m-0">
-            {fields.map(({id}, index) => (
+          <ul className="m-0 list-unstyled">
+            {fields.map(({id, producto, cantidad, unidad}, index) => (
               <li key={id}>
                 <Form.Control
                   className="w-25 d-inline-block"
                   type="text"
-                  placeholder="Producto/s"
-                  {...register(`ingredientes.${index}.nombre`, {required: true})} 
+                  name={`ingredientes[${index}].producto`}
+                  placeholder="Producto"
+                  defaultValue={producto}
+                  {...register(`ingredientes.${index}.producto`, {required: true})} 
                 />
                 <Form.Control
                   className="w-25 d-inline-block mx-4"
                   type="number"
+                  name={`ingredientes[${index}].cantidad`}
                   placeholder="Cantidad"
+                  defaultValue={cantidad}
                   {...register(`ingredientes.${index}.cantidad`, {required: true, valueAsNumber: true})} 
                 />
-                <Form.Control
-                  className="w-25 d-inline-block me-2"
-                  type="number"
-                  placeholder=""
-                  //! AGREGAR SELECTS
-                  {...register(`ingredientes.${index}.cantidad`, {required: true})}
-                />
+                <select
+                  className="form-select w-25 d-inline-block me-2"
+                  name={`ingredientes[${index}].unidad`}
+                  placeholder="Unidad de medida"
+                  {...register(`ingredientes.${index}.unidad`, {required: true})}
+                >
+                  <option value="">Unidad de medida</option>
+                  <option value="mg">Miligramos</option>
+                  <option value="g">Gramos</option>
+                  <option value="kg">Kilogramos</option>
+                  <option value="ml">Mililitros</option>
+                  <option value="l">Litros</option>
+                  <option value="cc.">Centímetros cúbicos</option>
+                </select>
                 <Button className="my-3" type="button" onClick={() => remove(index)}>Borrar</Button>
               </li>
             ))}
           </ul>
-          <Form.Text className="text-danger mb-4">{errors.ingredientes?.root.message}</Form.Text>
-          <Button className="align-self-start" type="button" onClick={() => append({nombre: "Ingrediente", cantidad: 1})}>Agregar</Button>
+          <Form.Text className="text-danger mb-4">{errors.ingredientes?.message}</Form.Text>
+          <Button className="align-self-start" type="button" onClick={() => append({nombre: 'Ingrediente', cantidad: 1, unidad: 'Elija una unidad de medida'})}>Agregar</Button>
         </Form.Group>
 
         <Button type="submit" variant="success">Guardar</Button>
