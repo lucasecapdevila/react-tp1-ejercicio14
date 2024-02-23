@@ -24,3 +24,19 @@
   height: 150px;
   resize: none;
 }
+
+.inputIngrediente{
+  width: 100%;
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .inputIngrediente{
+    width: 31% !important;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .inputIngrediente{
+    width: 32% !important;
+  }
+}

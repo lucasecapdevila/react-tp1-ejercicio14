@@ -104,7 +104,7 @@ const FormularioReceta = () => {
             {fields.map(({id, producto, cantidad, unidad}, index) => (
               <li key={id}>
                 <Form.Control
-                  className="w-25 d-inline-block"
+                  className="inputIngrediente d-inline-block"
                   type="text"
                   name={`ingredientes[${index}].producto`}
                   placeholder="Producto"
@@ -123,7 +123,7 @@ const FormularioReceta = () => {
                 />
                 
                 <Form.Control
-                  className="w-25 d-inline-block mx-4"
+                  className="inputIngrediente d-inline-block my-3 mx-sm-2 mx-lg-0"
                   type="number"
                   name={`ingredientes[${index}].cantidad`}
                   placeholder="Cantidad"
@@ -143,7 +143,7 @@ const FormularioReceta = () => {
                 />
                 
                 <select
-                  className="form-select w-25 d-inline-block me-2"
+                  className="form-select d-inline-block inputIngrediente"
                   name={`ingredientes[${index}].unidad`}
                   placeholder="Unidad de medida"
                   defaultValue={unidad}
@@ -159,14 +159,14 @@ const FormularioReceta = () => {
                   <option value="l">Litros</option>
                   <option value="cc.">Centímetros cúbicos</option>
                 </select>
-                <Button className="my-3" type="button" onClick={() => remove(index)}>Borrar</Button>
+                <Button variant="danger" className="my-3" type="button" onClick={() => remove(index)}>Borrar ingrediente</Button>
                 <Form.Text className="d-block text-danger">{errors.ingredientes?.[index]?.producto?.message}</Form.Text>
                 <Form.Text className="d-block text-danger">{errors.ingredientes?.[index]?.cantidad?.message}</Form.Text>
                 <Form.Text className="text-danger">{errors.ingredientes?.[index]?.unidad?.message}</Form.Text>
               </li>
             ))}
           </ul>
-          <Button className="align-self-start" type="button" onClick={() => append({nombre: 'Ingrediente', cantidad: 1, unidad: 'Elija una unidad de medida'})}>Agregar</Button>
+          <Button className="align-self-start" type="button" onClick={() => append({nombre: 'Ingrediente', cantidad: 1, unidad: 'Elija una unidad de medida'})}>Agregar ingrediente</Button>
         </Form.Group>
 
         <Button type="submit" variant="success">Guardar</Button>
