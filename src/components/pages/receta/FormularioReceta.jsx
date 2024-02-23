@@ -1,8 +1,8 @@
 import { Button, Form } from "react-bootstrap"
-import { useFieldArray, useForm, useWatch } from "react-hook-form"
+import { useFieldArray, useForm } from "react-hook-form"
 
 const FormularioReceta = () => {
-  const {control, register, handleSubmit, formState: {errors}} = useForm()
+  const {control, register, reset, handleSubmit, formState: {errors}} = useForm()
   const {
     fields: ingredientes,
     append: appendIngredientes,
@@ -27,8 +27,8 @@ const FormularioReceta = () => {
 
   const recetaValida = (receta) => {
     console.log(receta);
+    reset()
     //  Guardar receta
-    //  Vaciar formulario una vez que la receta es creada
   }
 
   return (
