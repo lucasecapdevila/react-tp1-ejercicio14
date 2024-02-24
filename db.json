@@ -79,6 +79,154 @@
       "descripcionBreve": "El arroz con pollo es una receta originaria de España. Es un plato a base de pollo y arroz, condimentado con ajo, cebolla y azafrán.",
       "descripcionAmplia": "El arroz con pollo es un plato delicioso y fácil de hacer, perfecto para cualquier ocasión. Tanto si buscas una comida sencilla para la semana como si quieres impresionar a tus invitados, este plato te va a decepcionar . Así que te pregunto: ¿Por qué no intentarlo? Y una advertencia: puede que ésta se convierta en una de sus nuevas recetas favoritas.",
       "id": "d50c"
+    },
+    {
+      "id": "be33",
+      "ingredientes": [
+        {
+          "producto": "Milanesas",
+          "cantidad": 1,
+          "unidad": "unidades"
+        },
+        {
+          "producto": "Queso mozzarella",
+          "cantidad": 150,
+          "unidad": "g"
+        },
+        {
+          "producto": "Jamón cocido",
+          "cantidad": 150,
+          "unidad": "g"
+        },
+        {
+          "producto": "Lata de puré de tomate",
+          "cantidad": 1,
+          "unidad": "unidades"
+        },
+        {
+          "producto": "Cebolla",
+          "cantidad": 1,
+          "unidad": "unidades"
+        },
+        {
+          "producto": "Dientes de Ajo",
+          "cantidad": 2,
+          "unidad": "unidades"
+        },
+        {
+          "producto": "Hojas de Laurel",
+          "cantidad": 2,
+          "unidad": "unidades"
+        }
+      ],
+      "preparacion": [
+        {
+          "paso": "Para la salsa de tomate: Picamos el ajo y la cebolla."
+        },
+        {
+          "paso": "Para la salsa de tomate: Calentamos una olla con aceite, ponemos el ajo y la cebolla dentro y esperamos que la cebolla se transparente."
+        },
+        {
+          "paso": "Para la salsa de tomate: Después, agregamos el puré de tomate y las dos hojas de laurel, deje cocinar por alrededor de 20 minutos."
+        },
+        {
+          "paso": "Para la salsa de tomate: Agregamos sal y pimienta a gusto."
+        },
+        {
+          "paso": "Milanesa: Vamos a colocar primero, por encima de nuestra milanesa, la salsa que acabamos de hacer. "
+        },
+        {
+          "paso": "Milanesa: Luego, colocamos unas fetas de jamón cocido"
+        },
+        {
+          "paso": "Milanesa: Finalmente, por encima, ponemos nuestro queso."
+        },
+        {
+          "paso": "Milanesa: Así, las vamos a llevar al horno 180º hasta que se derrita el queso y chorree por los costados generando el efecto más hermoso y tentador del universo.Así, las vamos a llevar al horno 180º hasta que se derrita el queso y chorree por los costados generando el efecto más hermoso y tentador del universo."
+        },
+        {
+          "paso": "Milanesa: Al sacarlas podemos tirar por encima unas pizcas de orégano y ¡listo!"
+        }
+      ],
+      "nombreReceta": "Milanesa Napolitana",
+      "imagen": "https://www.paulinacocina.net/wp-content/uploads/2015/03/P1150541-e1439164269502.jpg",
+      "categoria": "PlatoPrincipal",
+      "descripcionBreve": "La milanesa a la napolitana es un plato de origen argentino típico de la gastronomía de países rioplatenses que tiene su origen en la influencia de la Inmigración italiana.",
+      "descripcionAmplia": "Consiste en una milanesa, habitualmente de carne, llevada al horno para ser recubierta como una pizza, con rodajas de tomate y queso mozzarella, añadiendo diversos ingredientes (como jamón o cebolla).​ Habitualmente se sirve con una guarnición de papas fritas."
+    },
+    {
+      "id": "e25c",
+      "ingredientes": [
+        {
+          "producto": "Milanesas",
+          "cantidad": 1,
+          "unidad": "g"
+        },
+        {
+          "producto": "Queso mozzarella",
+          "cantidad": 150,
+          "unidad": "mg"
+        },
+        {
+          "producto": "Jamón cocido",
+          "cantidad": 150,
+          "unidad": "mg"
+        },
+        {
+          "producto": "Lata de puré de tomate",
+          "cantidad": 1,
+          "unidad": "cc."
+        },
+        {
+          "producto": "Cebolla",
+          "cantidad": 1,
+          "unidad": "cc."
+        },
+        {
+          "producto": "Dientes de Ajo",
+          "cantidad": 2,
+          "unidad": "g"
+        },
+        {
+          "producto": "Hojas de Laurel",
+          "cantidad": 2,
+          "unidad": "mg"
+        }
+      ],
+      "preparacion": [
+        {
+          "paso": "Al sacarlas podemos tirar por encima unas pizcas de orégano y ¡listo!"
+        },
+        {
+          "paso": "Al sacarlas podemos tirar por encima unas pizcas de orégano y ¡listo!"
+        },
+        {
+          "paso": "Al sacarlas podemos tirar por encima unas pizcas de orégano y ¡listo!"
+        },
+        {
+          "paso": "Al sacarlas podemos tirar por encima unas pizcas de orégano y ¡listo!"
+        },
+        {
+          "paso": "Al sacarlas podemos tirar por encima unas pizcas de orégano y ¡listo!"
+        },
+        {
+          "paso": "Al sacarlas podemos tirar por encima unas pizcas de orégano y ¡listo!"
+        },
+        {
+          "paso": "Al sacarlas podemos tirar por encima unas pizcas de orégano y ¡listo!"
+        },
+        {
+          "paso": "Al sacarlas podemos tirar por encima unas pizcas de orégano y ¡listo!"
+        },
+        {
+          "paso": "Al sacarlas podemos tirar por encima unas pizcas de orégano y ¡listo!"
+        }
+      ],
+      "nombreReceta": "Arroz con Pollo Clásico",
+      "imagen": "https://images.pexels.com/photos/3666/chocolate-dessert-brownies-cake.jpg",
+      "categoria": "PlatoPrincipal",
+      "descripcionBreve": "asdasdasdasdasd",
+      "descripcionAmplia": "asdasdasdasdadsasdasdadsasdasdasdasdadsaaaaaaaaaaaaaaaaaaaaa"
     }
   ],
   "usuarios": [
