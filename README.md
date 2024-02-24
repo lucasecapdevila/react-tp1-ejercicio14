@@ -2,13 +2,9 @@
 Prácticas con componentes, ciclo de vida del componente, eventos etc.
 
 ## Ejercicio N°10: Alta de Películas - Dificultad: 🟢🟡
-Crear una aplicación web con react que contenga un formulario con los siguientes
-campos:
-- Nombre (en un campo de texto)
-- Descripción (en un textarea)
-- Género (en un select donde podemos seleccionar comedia, drama o infantil)
-Cuando presione enviar, guardar esta película en el localstorage y mostrar en una
-card.
+Crea una aplicación web, que permita mostrar un blog de recetas de cocina en una
+página, desde otra pagina debo poder agregar, modificar o quitar las recetas y
+estas deben estar almacenadas en el localstorage o json-server.
 
 ## Librerías 📚
 -  [React](https://react.dev/)
