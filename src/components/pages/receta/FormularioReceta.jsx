@@ -105,28 +105,52 @@ const FormularioReceta = () => {
           </Form.Select>
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formDescripcion">
-          <Form.Label>Descripción<span className="text-danger">*</span></Form.Label>
+        <Form.Group className="mb-3" controlId="formDescripcionBreve">
+          <Form.Label>Descripción breve<span className="text-danger">*</span></Form.Label>
           <Form.Control
             type="text"
             className="textareaForm"
             placeholder="Ej: Un exquisito plato con atrapante aroma."
             as="textarea"
             {
-              ...register("descripcion", {
-                required: 'La descripción de la receta es obligatoria.',
+              ...register("descripcionBreve", {
+                required: 'La descripción breve de la receta es obligatoria.',
                 minLength:{
                   value: 10,
-                  message: 'Debe ingresar como mínimo 10 carácteres para la descripción de la receta.'
+                  message: 'Debe ingresar como mínimo 10 carácteres para la descripción breve de la receta.'
                 },
                 maxLength:{
                   value: 200,
-                  message: 'Debe ingresar como máximo 200 carácteres para la descripción de la receta.'
+                  message: 'Debe ingresar como máximo 200 carácteres para la descripción breve de la receta.'
                 }
               })
             }
           />
-          <Form.Text className="text-danger">{errors.descripcion?.message}</Form.Text>
+          <Form.Text className="text-danger">{errors.descripcionBreve?.message}</Form.Text>
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="formDescripcionAmplia">
+          <Form.Label>Descripción amplia<span className="text-danger">*</span></Form.Label>
+          <Form.Control
+            type="text"
+            className="textareaForm"
+            placeholder="Una descripción más detallada del plato."
+            as="textarea"
+            {
+              ...register("descripcionAmplia", {
+                required: 'La descripción amplia de la receta es obligatoria.',
+                minLength:{
+                  value: 50,
+                  message: 'Debe ingresar como mínimo 10 carácteres para la descripción amplia de la receta.'
+                },
+                maxLength:{
+                  value: 1000,
+                  message: 'Debe ingresar como máximo 200 carácteres para la descripción amplia de la receta.'
+                }
+              })
+            }
+          />
+          <Form.Text className="text-danger">{errors.descripcionAmplia?.message}</Form.Text>
         </Form.Group>
 
         <Form.Group className="mb-3 d-flex flex-column">
