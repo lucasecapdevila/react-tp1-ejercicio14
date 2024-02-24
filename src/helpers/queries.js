@@ -1,12 +1,11 @@
 const URI_RECETAS = import.meta.env.VITE_API_RECETAS
 
-//  Solicitud tipo GET o request (para el array de recetas almacenados)
+//  Solicitud tipo GET (o Request) para el array de recetas almacenadas
 export const leerRecetasAPI = async() => {
   try {
     const respuesta = await fetch(URI_RECETAS)
     console.log(respuesta);
     const listaRecetas = await respuesta.json()
-    console.log(listaRecetas);
     return listaRecetas
 
   } catch (error) {
@@ -44,7 +43,7 @@ export const crearRecetaAPI = async(recetaNueva) => {
 }
 
 
-//  Solicitud tipo PUT (editar)
+//  Solicitud tipo PUT (editar receta)
 export const editarRecetaAPI = async(id, receta) => {
   try {
     const respuesta = await fetch(`${URI_RECETAS}/${id}`, {

@@ -1,22 +1,41 @@
 import { Button, Form } from "react-bootstrap"
 import { useFieldArray, useForm } from "react-hook-form"
-import { crearRecetaAPI, editarRecetaAPI } from "../../../helpers/queries";
+import { crearRecetaAPI, editarRecetaAPI, obtenerRecetaAPI } from "../../../helpers/queries";
 import Swal from "sweetalert2";
 import { useNavigate, useParams } from "react-router";
+import { useEffect } from "react";
 
 const FormularioReceta = ({crear, titulo}) => {
-  const {control, register, reset, handleSubmit, formState: {errors}} = useForm()
+  useEffect(() =>{
+    if(!crear){
+      cargarDatosFormulario()
+    }
+  }, [])
+
+  //  Hooks de React Hook Form
+  const {
+    control,
+    register,
+    reset,
+    setValue,
+    handleSubmit,
+    formState: {errors}
+  } = useForm()
+  
+  //  Hooks para usar UseFieldArray (campo de ingredientes)
   const {
     fields: ingredientes,
     append: appendIngredientes,
-    remove: removeIngredientes } = useFieldArray({
-      control,
-      name: "ingredientes",
-      rules: {
-        required: 'Debe agregar al menos 1 ítem.'
-      }
-    });
+    remove: removeIngredientes
+  } = useFieldArray({
+    control,
+    name: "ingredientes",
+    rules: {
+      required: 'Debe agregar al menos 1 ítem.'
+    }
+  });
   
+  //  Hooks para usar UseFieldArray (campo de preparación)
   const {
     fields: preparacion,
     append: appendPreparacion,
@@ -32,6 +51,28 @@ const FormularioReceta = ({crear, titulo}) => {
   //  Variables que traigo de react-router
   const {id} = useParams()
   const navegacion = useNavigate()
+
+  //  Función para mostrar los datos de la receta en el formulario al editar
+  const cargarDatosFormulario = async() => {
+    const respuesta = await obtenerRecetaAPI(id)
+    if(respuesta.status === 200){
+      const recetaBuscada = await respuesta.json()
+
+      setValue('nombreReceta', recetaBuscada.nombreReceta)
+      setValue('categoria', recetaBuscada.categoria)
+      setValue('descripcion', recetaBuscada.descripcion)
+      setValue('imagen', recetaBuscada.imagen)
+      //! Asignar correctamente cada campo
+      // setValue('ingredientes', recetaBuscada.ingredientes)
+      // setValue('preparacion', recetaBuscada.preparacion)
+    } else{
+      Swal.fire({
+        title: "Ocurrió un error",
+        text: "Intente realizar esta operación en unos minutos.",
+        icon: "error"
+      });
+    }
+  }
 
   const recetaValida = async(receta) => {
     try {
