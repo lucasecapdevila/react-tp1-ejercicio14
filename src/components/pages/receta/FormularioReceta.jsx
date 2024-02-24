@@ -88,6 +88,8 @@ const FormularioReceta = ({crear, titulo}) => {
             icon: "success"
           });
           reset();
+          removeIngredientes()
+          removePreparacion()
         } else{
           Swal.fire({
             title: "Ocurrió un error",
