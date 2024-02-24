@@ -42,7 +42,7 @@ const Administrador = () => {
           </thead>
           <tbody>
             {
-              listaRecetas.map((receta) => <ItemReceta key={receta.id} receta={receta} /> )
+              listaRecetas.map((receta) => <ItemReceta key={receta.id} receta={receta} setListaRecetas={setListaRecetas} /> )
             }
           </tbody>
         </Table>

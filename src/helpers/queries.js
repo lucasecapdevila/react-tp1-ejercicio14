@@ -4,7 +4,6 @@ const URI_RECETAS = import.meta.env.VITE_API_RECETAS
 export const leerRecetasAPI = async() => {
   try {
     const respuesta = await fetch(URI_RECETAS)
-    console.log(respuesta);
     const listaRecetas = await respuesta.json()
     return listaRecetas
 
@@ -52,6 +51,20 @@ export const editarRecetaAPI = async(id, receta) => {
         "Content-Type": "application/json"
       },
       body: JSON.stringify(receta)
+    })
+    return respuesta
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+
+
+//  Solicitud tipo DELETE (eliminar receta)
+export const borrarRecetaAPI = async(id) => {
+  try {
+    const respuesta = await fetch(`${URI_RECETAS}/${id}`, {
+      method: "DELETE",
     })
     return respuesta
   } catch (error) {
