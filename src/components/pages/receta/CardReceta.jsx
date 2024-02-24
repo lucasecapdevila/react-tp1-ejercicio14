@@ -14,7 +14,7 @@ const CardReceta = ({receta}) => {
             <b>Categoría:</b> {receta.categoria}
             <br />
             <br />
-            {receta.descripcion}
+            {receta.descripcionBreve}
           </CardText>
         </CardBody>
         <CardFooter className="d-flex flex-column">

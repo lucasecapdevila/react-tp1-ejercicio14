@@ -1,5 +1,86 @@
 {
-  "recetas": [],
+  "recetas": [
+    {
+      "ingredientes": [
+        {
+          "producto": "Cebolla",
+          "cantidad": 1,
+          "unidad": "unidades"
+        },
+        {
+          "producto": "Pimiento morrón",
+          "cantidad": 1,
+          "unidad": "unidades"
+        },
+        {
+          "producto": "Diente de ajo",
+          "cantidad": 1,
+          "unidad": "unidades"
+        },
+        {
+          "producto": "Pechuga de pollo",
+          "cantidad": 1,
+          "unidad": "unidades"
+        },
+        {
+          "producto": "Tomate",
+          "cantidad": 1,
+          "unidad": "unidades"
+        },
+        {
+          "producto": "Arroz",
+          "cantidad": 250,
+          "unidad": "mg"
+        },
+        {
+          "producto": "Caldo de ave o verduras",
+          "cantidad": 1,
+          "unidad": "unidades"
+        },
+        {
+          "producto": "Aceto balsámico (o vino blanco)",
+          "cantidad": 50,
+          "unidad": "ml"
+        },
+        {
+          "producto": "Condimento para arroz",
+          "cantidad": 50,
+          "unidad": "mg"
+        },
+        {
+          "producto": "Ciboulette picado (para decorar)",
+          "cantidad": 100,
+          "unidad": "mg"
+        }
+      ],
+      "preparacion": [
+        {
+          "paso": "Trocear el pollo en pedazos pequeños y saltearlo en la sartén caliente (con un chorrito de aceite) hasta que esté dorado de ambas partes. Retirar y reservar."
+        },
+        {
+          "paso": "Saltear en el fondo de cocción del pollo la cebolla, el morrón y el ajo, todo picado pequeño."
+        },
+        {
+          "paso": "Cuando la cebolla esté transparente, incorporar el tomate, también picado. Sofreír hasta que tome un color amarronado."
+        },
+        {
+          "paso": "Incorporar los trozos de pollo que habíamos reservado. Agregar el arroz y remover, salteando a fuego medio, hasta que los granos de arroz se vean transparentes."
+        },
+        {
+          "paso": "Agregar el doble de agua (2 tazas), salpimentar y condimentar. Agregar también el chorro de aceto o vino. Revolver una sola vez y dejar que hierva. Cuando hirvió, bajar el fuego a medio y cocinar destapado, hasta que el arroz haya consumido toda el agua. No revolver durante la cocción."
+        },
+        {
+          "paso": "Servir y llover con ciboulette picado. Se puede comer con limón."
+        }
+      ],
+      "nombreReceta": "Arroz con Pollo Clásico",
+      "imagen": "https://www.paulinacocina.net/wp-content/uploads/2015/02/arroz-pollo.jpg",
+      "categoria": "PlatoPrincipal",
+      "descripcionBreve": "El arroz con pollo es una receta originaria de España. Es un plato a base de pollo y arroz, condimentado con ajo, cebolla y azafrán.",
+      "descripcionAmplia": "El arroz con pollo es un plato delicioso y fácil de hacer, perfecto para cualquier ocasión. Tanto si buscas una comida sencilla para la semana como si quieres impresionar a tus invitados, este plato te va a decepcionar . Así que te pregunto: ¿Por qué no intentarlo? Y una advertencia: puede que ésta se convierta en una de sus nuevas recetas favoritas.",
+      "id": "d50c"
+    }
+  ],
   "usuarios": [
     {
       "email": "prueba@mail.com",

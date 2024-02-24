@@ -166,7 +166,13 @@ const FormularioReceta = ({crear, titulo}) => {
 
         <Form.Group className="mb-3" controlId="formCategoria">
           <Form.Label>Categoría<span className="text-danger">*</span></Form.Label>
-          <Form.Select required>
+          <Form.Select 
+            {
+              ...register("categoria",{
+                required:'La categoría de la receta es obligatoria.'
+              })
+            }
+          >
             <option value="">Seleccione una opcion</option>
             <option value="Entradas">Entradas</option>
             <option value="Guarnicion">Guarnición</option>
@@ -279,7 +285,7 @@ const FormularioReceta = ({crear, titulo}) => {
                   })}
                 >
                   <option value="">Seleccione una unidad de medida</option>
-                  <option value="mg">Unidades</option>
+                  <option value="unidades">Unidades</option>
                   <option value="mg">Miligramos</option>
                   <option value="g">Gramos</option>
                   <option value="kg">Kilogramos</option>
