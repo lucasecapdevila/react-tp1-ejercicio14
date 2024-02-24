@@ -1,26 +1,21 @@
 {
   "recetas": [
     {
-      "nombreReceta": "Contramuslos de pollo en salsa de cebolla",
-      "categoria": "Plato Principal",
-      "descripcion": "El pollo es una de esas carnes que admite tantas preparaciones como tu imaginación te deje. Estos contramuslos de pollo en salsa de cebolla son perfectos para diario o para algún día que quieras sorprender en casa. Queda un pollo guisado muy tierno y la salsa le da un toque espectacular. Puedes utilizar la parte del pollo que prefieras, los jamoncitos del pollo también quedarían deliciosos guisados de esta forma.",
-      "imagen": "https://www.annarecetasfaciles.com/files/contramusloa-pollo-salsa-cebolla-3-815x458.jpg",
       "ingredientes": [
-        "5 contramuslos de pollo",
-        "1 cebolla",
-        "2 dientes de ajo",
-        "200 ml de caldo de pollo",
-        "Sal y pimienta",
-        "Aceite de oliva",
-        "1 hoja de laurel",
-        "Papas fritas para acompañar"
+        {
+          "producto": "asdasdasd",
+          "cantidad": 1,
+          "unidad": "g"
+        }
       ],
       "preparacion": [
-        "Prepara los contramuslos de pollo. Salpimenta los contramuslos al gusto y cocina en una sartén con un chorro de aceite hasta que estén dorados por los dos lados. Añade la cebolla y los ajos picados y cocina a fuego lento hasta que empiece a tomar color.",
-        "Incorpora el caldo y la hoja de laurel, pon a punto de sal y deja cocinar tapado durante 30 minutos. De vez en cuando, dales la vuelta a los contramuslos para que se vayan guisando por todos los lados y queden cocinados por todos las lados.",
-        "Fríe unas papas para acompañar y sirve. También puedes añadir un poco de ensalada y obtener un plato redondo. Sirve un contramuslo por ración bien regado con la salsa de cebolla."
+        {
+          "paso": "asdasdasdadsasdasdasd"
+        }
       ],
-      "disponibilidad": true,
+      "nombreReceta": "Pollo",
+      "imagen": "https://alicante.com.ar/wp-content/uploads/2023/12/2663_receta.jpg",
+      "descripcion": "asdasdasdasdasdad",
       "id": "1"
     },
     {

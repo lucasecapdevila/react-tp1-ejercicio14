@@ -1,7 +1,8 @@
 import { Button, Form } from "react-bootstrap"
 import { useFieldArray, useForm } from "react-hook-form"
-import { crearRecetaAPI } from "../../../helpers/queries";
+import { crearRecetaAPI, editarRecetaAPI } from "../../../helpers/queries";
 import Swal from "sweetalert2";
+import { useNavigate, useParams } from "react-router";
 
 const FormularioReceta = ({crear, titulo}) => {
   const {control, register, reset, handleSubmit, formState: {errors}} = useForm()
@@ -19,13 +20,18 @@ const FormularioReceta = ({crear, titulo}) => {
   const {
     fields: preparacion,
     append: appendPreparacion,
-    remove: removePreparacion } = useFieldArray({
-      control,
-      name: "preparacion",
-      rules: {
-        required: 'Debe agregar al menos 1 paso de la preparación.'
-      }
-    });
+    remove: removePreparacion 
+  } = useFieldArray({
+    control,
+    name: "preparacion",
+    rules: {
+      required: 'Debe agregar al menos 1 paso de la preparación.'
+    }
+  });
+
+  //  Variables que traigo de react-router
+  const {id} = useParams()
+  const navegacion = useNavigate()
 
   const recetaValida = async(receta) => {
     try {
@@ -49,6 +55,22 @@ const FormularioReceta = ({crear, titulo}) => {
         }
       } else{
         //  Lógica de EDITAR RECETA
+        const respuesta = await editarRecetaAPI(id, receta)
+        if(respuesta.status === 200){
+          Swal.fire({
+            title: "Receta editada",
+            text: `La receta ${receta.nombreReceta} fue modificada exitosamente.`,
+            icon: "success"
+          });
+          //  Redireccionar a tabla de Administrador una vez terminada la edición
+          navegacion('/admin')
+        } else{
+          Swal.fire({
+            title: "Ocurrió un error",
+            text: "Intente modificar la receta en unos minutos.",
+            icon: "error"
+          });
+        }
       }
     } catch (error) {
       console.log(error);

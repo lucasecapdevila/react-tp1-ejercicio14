@@ -15,7 +15,6 @@ export const leerRecetasAPI = async() => {
 }
 
 
-
 //  Solicitud tipo POST (crear receta)
 export const crearRecetaAPI = async(recetaNueva) => {
   try {
@@ -25,6 +24,23 @@ export const crearRecetaAPI = async(recetaNueva) => {
         "Content-Type": "application/json"
       },
       body: JSON.stringify(recetaNueva)
+    })
+    return respuesta
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+
+//  Solicitud tipo PUT (editar)
+export const editarRecetaAPI = async(id, receta) => {
+  try {
+    const respuesta = await fetch(`${URI_RECETAS}/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(receta)
     })
     return respuesta
   } catch (error) {
