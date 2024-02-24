@@ -207,6 +207,7 @@ const FormularioReceta = () => {
                   })}
                 >
                   <option value="">Seleccione una unidad de medida</option>
+                  <option value="mg">Unidades</option>
                   <option value="mg">Miligramos</option>
                   <option value="g">Gramos</option>
                   <option value="kg">Kilogramos</option>
