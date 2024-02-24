@@ -60,7 +60,8 @@ const FormularioReceta = ({crear, titulo}) => {
 
       setValue('nombreReceta', recetaBuscada.nombreReceta)
       setValue('categoria', recetaBuscada.categoria)
-      setValue('descripcion', recetaBuscada.descripcion)
+      setValue('descripcionBreve', recetaBuscada.descripcionBreve)
+      setValue('descripcionAmplia', recetaBuscada.descripcionAmplia)
       setValue('imagen', recetaBuscada.imagen)
       //! Asignar correctamente cada campo
       // setValue('ingredientes', recetaBuscada.ingredientes)
