@@ -85,6 +85,78 @@
       ],
       "disponibilidad": true,
       "id": "3"
+    },
+    {
+      "id": "712e",
+      "ingredientes": [
+        {
+          "producto": "Harina",
+          "cantidad": 1,
+          "unidad": "kg"
+        }
+      ],
+      "preparacion": [
+        {
+          "paso": "Hacer la pizza"
+        }
+      ],
+      "nombreReceta": "Pizzas",
+      "imagen": "https://images.pexels.com/photos/3666/chocolate-dessert-brownies-cake.jpg",
+      "descripcion": "Pizza superrrrr rica"
+    },
+    {
+      "id": "4641",
+      "ingredientes": [
+        {
+          "producto": "Ingrediente",
+          "cantidad": 1,
+          "unidad": "kg"
+        }
+      ],
+      "preparacion": [
+        {
+          "paso": "Amasar y armar"
+        }
+      ],
+      "nombreReceta": "Pizzas",
+      "imagen": "https://cosquinrock.net/wp-content/uploads/2024/01/CR24_Esc_Norte.png",
+      "descripcion": "asdadsasdasdads"
+    },
+    {
+      "id": "bbef",
+      "ingredientes": [
+        {
+          "producto": "Harina",
+          "cantidad": 1,
+          "unidad": "kg"
+        }
+      ],
+      "preparacion": [
+        {
+          "paso": "Hacer la pizza "
+        }
+      ],
+      "nombreReceta": "Pizzas",
+      "imagen": "https://cosquinrock.net/wp-content/uploads/2024/01/CR24_Esc_Norte.png",
+      "descripcion": "Pizza calentita"
+    },
+    {
+      "id": "68b1",
+      "ingredientes": [
+        {
+          "producto": "Picadillo",
+          "cantidad": 1,
+          "unidad": "kg"
+        }
+      ],
+      "preparacion": [
+        {
+          "paso": "Armar las empanadas"
+        }
+      ],
+      "nombreReceta": "Empanadas",
+      "imagen": "https://images.pexels.com/photos/3666/chocolate-dessert-brownies-cake.jpg",
+      "descripcion": "Empanadas tucumanas muy ricas"
     }
   ],
   "usuarios": [

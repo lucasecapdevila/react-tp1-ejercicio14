@@ -16,6 +16,7 @@ card.
 -  [React Router](https://reactrouter.com/en/main)
 -  [React Hook Form](https://react-hook-form.com/)
 -  [JSON Server](https://github.com/typicode/json-server)
+-  [Sweetalert2](https://sweetalert2.github.io/)
 
 ## Link de Deploy 🌐
 - [Netlify](https://lucasecapdevila-tpn14react76i.netlify.app/)

@@ -1,5 +1,6 @@
 const URI_RECETAS = import.meta.env.VITE_API_RECETAS
 
+//  Solicitud tipo GET (para el array de recetas almacenados)
 export const leerRecetasAPI = async() => {
   try {
     const respuesta = await fetch(URI_RECETAS)
@@ -8,6 +9,24 @@ export const leerRecetasAPI = async() => {
     console.log(listaRecetas);
     return listaRecetas
 
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+
+
+//  Solicitud tipo POST (crear receta)
+export const crearRecetaAPI = async(recetaNueva) => {
+  try {
+    const respuesta = await fetch(URI_RECETAS, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(recetaNueva)
+    })
+    return respuesta
   } catch (error) {
     console.log(error);
   }

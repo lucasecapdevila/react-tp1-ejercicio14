@@ -1,5 +1,7 @@
 import { Button, Form } from "react-bootstrap"
 import { useFieldArray, useForm } from "react-hook-form"
+import { crearRecetaAPI } from "../../../helpers/queries";
+import Swal from "sweetalert2";
 
 const FormularioReceta = () => {
   const {control, register, reset, handleSubmit, formState: {errors}} = useForm()
@@ -25,10 +27,24 @@ const FormularioReceta = () => {
       }
     });
 
-  const recetaValida = (receta) => {
-    console.log(receta);
-    reset()
-    //  Guardar receta
+  const recetaValida = async(receta) => {    
+    //  Lógica de CREAR RECETA
+    const respuesta = await crearRecetaAPI(receta);
+    if(respuesta.status === 201){
+      //  Mensaje para el usuario con SweetAlert
+      Swal.fire({
+        title: "Receta creada",
+        text: `La receta ${receta.nombreReceta} fue creada exitosamente.`,
+        icon: "success"
+      });
+      reset();
+    } else{
+      Swal.fire({
+        title: "Ocurrió un error",
+        text: "Intente crear la receta en unos minutos.",
+        icon: "error"
+      });
+    }
   }
 
   return (
