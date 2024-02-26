@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 const CardReceta = ({receta}) => {
   return (
-    <Col xs={12} sm={6} md={4} className="my-2">
+    <Col xs={12} sm={6} md={4} lg={3} className="my-2">
       <Card className="px-0 h-100">
         <CardHeader className="p-0">
           <CardImg className="img-fluid card-img" src={receta.imagen} alt={receta.nombreReceta} />
