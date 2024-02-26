@@ -57,15 +57,14 @@ const FormularioReceta = ({crear, titulo}) => {
     const respuesta = await obtenerRecetaAPI(id)
     if(respuesta.status === 200){
       const recetaBuscada = await respuesta.json()
-
+      //  Asignar valores en los campos del formulario para su edición
       setValue('nombreReceta', recetaBuscada.nombreReceta)
       setValue('categoria', recetaBuscada.categoria)
       setValue('descripcionBreve', recetaBuscada.descripcionBreve)
       setValue('descripcionAmplia', recetaBuscada.descripcionAmplia)
       setValue('imagen', recetaBuscada.imagen)
-      //! Asignar correctamente cada campo
-      // setValue('ingredientes', recetaBuscada.ingredientes)
-      // setValue('preparacion', recetaBuscada.preparacion)
+      setValue('ingredientes', recetaBuscada.ingredientes)
+      setValue('preparacion', recetaBuscada.preparacion)
     } else{
       Swal.fire({
         title: "Ocurrió un error",

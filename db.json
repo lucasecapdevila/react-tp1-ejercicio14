@@ -81,11 +81,10 @@
       "id": "d50c"
     },
     {
-      "id": "be33",
       "ingredientes": [
         {
           "producto": "Milanesas",
-          "cantidad": 1,
+          "cantidad": 3,
           "unidad": "unidades"
         },
         {
@@ -152,7 +151,8 @@
       "imagen": "https://www.paulinacocina.net/wp-content/uploads/2015/03/P1150541-e1439164269502.jpg",
       "categoria": "PlatoPrincipal",
       "descripcionBreve": "La milanesa a la napolitana es un plato de origen argentino típico de la gastronomía de países rioplatenses que tiene su origen en la influencia de la Inmigración italiana.",
-      "descripcionAmplia": "Consiste en una milanesa, habitualmente de carne, llevada al horno para ser recubierta como una pizza, con rodajas de tomate y queso mozzarella, añadiendo diversos ingredientes (como jamón o cebolla).​ Habitualmente se sirve con una guarnición de papas fritas."
+      "descripcionAmplia": "Consiste en una milanesa, habitualmente de carne, llevada al horno para ser recubierta como una pizza, con rodajas de tomate y queso mozzarella, añadiendo diversos ingredientes (como jamón o cebolla).​ Habitualmente se sirve con una guarnición de papas fritas.",
+      "id": "be33"
     }
   ],
   "usuarios": [
