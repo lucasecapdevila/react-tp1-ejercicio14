@@ -18,7 +18,7 @@ const CardReceta = ({receta}) => {
           </CardText>
         </CardBody>
         <CardFooter className="d-flex flex-column">
-          <Link to='/detalle' className="btn btn-success align-self-end">Ver más</Link>
+          <Link to={`/detalle/${receta.id}`} className="btn btn-success align-self-end">Ver más</Link>
         </CardFooter>
       </Card>
     </Col>
