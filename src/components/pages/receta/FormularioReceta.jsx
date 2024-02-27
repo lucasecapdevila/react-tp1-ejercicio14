@@ -178,7 +178,7 @@ const FormularioReceta = ({crear, titulo}) => {
             <option value="">Seleccione una opcion</option>
             <option value="Entradas">Entradas</option>
             <option value="Guarnicion">Guarnición</option>
-            <option value="PlatoPrincipal">Plato Principal</option>
+            <option value="Plato Principal">Plato Principal</option>
             <option value="Postres">Postres</option>
             <option value="Salsas">Salsas</option>
             <option value="Masas">Pizzas y Masas</option>
@@ -221,11 +221,11 @@ const FormularioReceta = ({crear, titulo}) => {
                 required: 'La descripción amplia de la receta es obligatoria.',
                 minLength:{
                   value: 50,
-                  message: 'Debe ingresar como mínimo 10 carácteres para la descripción amplia de la receta.'
+                  message: 'Debe ingresar como mínimo 50 carácteres para la descripción amplia de la receta.'
                 },
                 maxLength:{
                   value: 1000,
-                  message: 'Debe ingresar como máximo 200 carácteres para la descripción amplia de la receta.'
+                  message: 'Debe ingresar como máximo 1000 carácteres para la descripción amplia de la receta.'
                 }
               })
             }
@@ -287,7 +287,7 @@ const FormularioReceta = ({crear, titulo}) => {
                   })}
                 >
                   <option value="">Seleccione una unidad de medida</option>
-                  <option value="unidades">Unidades</option>
+                  <option value="unidad/es">Unidades</option>
                   <option value="mg">Miligramos</option>
                   <option value="g">Gramos</option>
                   <option value="kg">Kilogramos</option>
