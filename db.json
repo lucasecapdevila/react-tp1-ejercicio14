@@ -5,27 +5,27 @@
         {
           "producto": "Cebolla",
           "cantidad": 1,
-          "unidad": "unidades"
+          "unidad": "unidad/es"
         },
         {
           "producto": "Pimiento morrón",
           "cantidad": 1,
-          "unidad": "unidades"
+          "unidad": "unidad/es"
         },
         {
           "producto": "Diente de ajo",
           "cantidad": 1,
-          "unidad": "unidades"
+          "unidad": "unidad/es"
         },
         {
           "producto": "Pechuga de pollo",
           "cantidad": 1,
-          "unidad": "unidades"
+          "unidad": "unidad/es"
         },
         {
           "producto": "Tomate",
           "cantidad": 1,
-          "unidad": "unidades"
+          "unidad": "unidad/es"
         },
         {
           "producto": "Arroz",
@@ -35,7 +35,7 @@
         {
           "producto": "Caldo de ave o verduras",
           "cantidad": 1,
-          "unidad": "unidades"
+          "unidad": "unidad/es"
         },
         {
           "producto": "Aceto balsámico (o vino blanco)",
@@ -75,7 +75,7 @@
       ],
       "nombreReceta": "Arroz con Pollo Clásico",
       "imagen": "https://www.paulinacocina.net/wp-content/uploads/2015/02/arroz-pollo.jpg",
-      "categoria": "PlatoPrincipal",
+      "categoria": "Plato Principal",
       "descripcionBreve": "El arroz con pollo es una receta originaria de España. Es un plato a base de pollo y arroz, condimentado con ajo, cebolla y azafrán.",
       "descripcionAmplia": "El arroz con pollo es un plato delicioso y fácil de hacer, perfecto para cualquier ocasión. Tanto si buscas una comida sencilla para la semana como si quieres impresionar a tus invitados, este plato te va a decepcionar . Así que te pregunto: ¿Por qué no intentarlo? Y una advertencia: puede que ésta se convierta en una de sus nuevas recetas favoritas.",
       "id": "d50c"
@@ -85,7 +85,7 @@
         {
           "producto": "Milanesas",
           "cantidad": 1,
-          "unidad": "unidades"
+          "unidad": "unidad/es"
         },
         {
           "producto": "Queso mozzarella",
@@ -100,22 +100,22 @@
         {
           "producto": "Lata de puré de tomate",
           "cantidad": 1,
-          "unidad": "unidades"
+          "unidad": "unidad/es"
         },
         {
           "producto": "Cebolla",
           "cantidad": 1,
-          "unidad": "unidades"
+          "unidad": "unidad/es"
         },
         {
           "producto": "Dientes de Ajo",
           "cantidad": 2,
-          "unidad": "unidades"
+          "unidad": "unidad/es"
         },
         {
           "producto": "Hojas de Laurel",
           "cantidad": 2,
-          "unidad": "unidades"
+          "unidad": "unidad/es"
         }
       ],
       "preparacion": [
@@ -149,7 +149,7 @@
       ],
       "nombreReceta": "Milanesa Napolitana",
       "imagen": "https://www.paulinacocina.net/wp-content/uploads/2015/03/P1150541-e1439164269502.jpg",
-      "categoria": "PlatoPrincipal",
+      "categoria": "Plato Principal",
       "descripcionBreve": "La milanesa a la napolitana es un plato de origen argentino típico de la gastronomía de países rioplatenses que tiene su origen en la influencia de la Inmigración italiana.",
       "descripcionAmplia": "Consiste en una milanesa, habitualmente de carne, llevada al horno para ser recubierta como una pizza, con rodajas de tomate y queso mozzarella, añadiendo diversos ingredientes (como jamón o cebolla).​ Habitualmente se sirve con una guarnición de papas fritas.",
       "id": "be33"
