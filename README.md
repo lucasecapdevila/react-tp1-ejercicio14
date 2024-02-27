@@ -1,7 +1,7 @@
 # Ejercicios React - Rolling Code School 
 Prácticas con componentes, ciclo de vida del componente, eventos etc.
 
-## Ejercicio N°10: Alta de Películas - Dificultad: 🟢🟡
+## Ejercicio N°14: Blog de recetas - Dificultad: 🟢🟡🔴
 Crea una aplicación web, que permita mostrar un blog de recetas de cocina en una
 página, desde otra pagina debo poder agregar, modificar o quitar las recetas y
 estas deben estar almacenadas en el localstorage o json-server.
@@ -24,6 +24,7 @@ estas deben estar almacenadas en el localstorage o json-server.
 
 ## Uso ✍️
 Para ver el ejercicio en el navegador, ejecutar el comando `npm run dev`.
+Ejecutar el comando `npx json-server db.json` para correr el servidor de Json-Server
 
 ## Autor 👷‍♂️
 - Capdevila Lucas
